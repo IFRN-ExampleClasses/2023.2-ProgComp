@@ -1,3 +1,4 @@
+# Declarando o dicionário
 dictNE = {'AL': {'capital': 'Maceió', 'populacao': 1018948}, 
           'BA': {'capital': 'Salvador', 'populacao': 2872347}, 
           'CE': {'capital': 'Fortaleza', 'populacao': 2669342}, 
