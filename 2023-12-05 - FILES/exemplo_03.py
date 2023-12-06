@@ -10,3 +10,13 @@ dictNE = {'AL': {'capital': 'Maceió', 'populacao': 1018948},
           'SE': {'capital': 'Aracaju', 'populacao': 657013}
           }
 
+# Abrindo o arquivo no mode de escrita (w) e aceitando
+# caracteres acentuados (utf-8)
+arqCapitais = open('nordeste_3.txt', 'w', encoding='utf-8')
+
+# Escrevendo os itens do dicionário no arquivo
+for k, v in dictNE.items():
+    arqCapitais.write(f'{v["capital"]}/{k}:{v["populacao"]}\n')
+
+# Fechando o arquivo
+arqCapitais.close()

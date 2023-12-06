@@ -13,16 +13,16 @@ lstCapitais = [
 
 # Abrindo o arquivo no mode de escrita (w) e aceitando
 # caracteres acentuados (utf-8)
-arqCapitais = open('nordeste_1.txt', 'w', encoding='utf-8')
+arqCapitais = open('nordeste_2b.txt', 'w', encoding='utf-8')
 
 # Escrevendo os itens da lista no arquivo
-intPopTotal = 0
 for cidade in lstCapitais:
     arqCapitais.write(f'{cidade[1]}/{cidade[0]}:{cidade[2]}\n')
-    intPopTotal += cidade[2]
 
-# Escrevendo a população total da região NE
-arqCapitais.write(f'\nPopulação Total NE: {intPopTotal}')
+# Escrevendo os dados do estado com a maior população
+lstDadosMaiorPop = max(lstCapitais, key=lambda estado: estado[2])
+arqCapitais.write(f'\nCapital Mais Populosa: {lstDadosMaiorPop[1]}/{lstDadosMaiorPop[0]}\n')
+arqCapitais.write(f'População: {lstDadosMaiorPop[2]}')
 
 # Fechando o arquivo
 arqCapitais.close()
