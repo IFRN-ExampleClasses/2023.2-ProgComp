@@ -14,4 +14,4 @@ if retRequisicao.status_code != 200:
     sys.exit()
 
 lstCursos = retRequisicao.json()
-print(lstCursos)
+print(len(lstCursos))
